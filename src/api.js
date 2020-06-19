@@ -102,7 +102,7 @@ const upload = multer({
 })
 
 // POST PICTURE
-app.post('/picture', upload.single('avatar'), async (req,res) => {
+app.post('/picture', upload.single('picture'), async (req,res) => {
 
    try {
        const sql = `UPDATE films SET picture = ? WHERE id = ?`
